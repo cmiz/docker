@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+    web:
+        build: ./web
+        volumes:
+            - ${WWW_ROOT}:/var/www
+        ports:
+            - 80:80
+
