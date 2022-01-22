@@ -1,0 +1,38 @@
+version: "3"
+
+services:
+    php:
+        build: ./php
+        volumes:
+            - ${WWW_ROOT}:/var/www
+
+    nginx:
+        build: ./nginx
+        volumes:
+            - ${WWW_ROOT}:/var/www
+        ports:
+            - 80:80
+            - 443:443
+
+    mysql:
+        build: ./mysql
+        volumes:
+            - data:/var/lib/mysql
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_DATABASE: docker
+            MYSQL_USER: docker
+            MYSQL_PASSWORD: docker
+            TZ: Asia/Tokyo
+        ports:
+            - 3306:3306
+
+    maildev:
+        image: maildev/maildev
+        command: -w 1080 -s 1025
+        ports:
+            - 1025:1025
+            - 1080:1080
+
+volumes:
+    data:
