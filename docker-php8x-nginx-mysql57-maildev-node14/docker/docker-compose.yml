@@ -6,6 +6,12 @@ services:
         volumes:
             - ${WWW_ROOT}:/var/www
 
+    node:
+        build: ./node
+        volumes:
+            - ${WWW_ROOT}:/var/www
+        tty: true
+
     nginx:
         build: ./nginx
         volumes:

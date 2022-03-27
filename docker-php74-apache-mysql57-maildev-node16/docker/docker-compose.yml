@@ -1,13 +1,8 @@
 version: "3"
 
 services:
-    php:
-        build: ./php
-        volumes:
-            - ${WWW_ROOT}:/var/www
-
-    nginx:
-        build: ./nginx
+    php-apache:
+        build: ./php-apache
         volumes:
             - ${WWW_ROOT}:/var/www
         ports:
