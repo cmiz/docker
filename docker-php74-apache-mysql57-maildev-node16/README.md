@@ -1,18 +1,19 @@
 # Docker - ローカル開発環境
 
+## 起動
 ```shell
 > cd docker
 > docker-compose up -d
 ```
 
+## コンテナログイン
+```shell
+> docker-compose exec php-apache bash
+```
+
 ## hosts
 ```
 127.0.0.1  local.test.site
-```
-
-## コンテナ
-```shell
-> docker-compose exec php-apache bash
 ```
 
 ## Apache

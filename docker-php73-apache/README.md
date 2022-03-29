@@ -1,8 +1,14 @@
 # Docker - ローカル開発環境
 
+## 起動
 ```
 > cd docker
 > docker-compose up -d
+```
+
+## コンテナログイン
+```shell
+> docker-compose exec web bash
 ```
 
 ## hosts
