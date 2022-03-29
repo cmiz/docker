@@ -5,10 +5,14 @@ COPY php.ini /usr/local/etc/php/
 
 RUN a2enmod ssl && a2enmod rewrite
 
+RUN curl -sL https://deb.nodesource.com/setup_16.x | bash -
+
 RUN apt-get update && apt-get install -y \
     libzip-dev \
     libpng-dev \
-    libonig-dev
+    libonig-dev \
+    nodejs \
+    git
 
 RUN docker-php-ext-install \
     gd \
@@ -23,7 +27,5 @@ RUN openssl req -new -newkey rsa:4096 -days 365 -nodes -x509 \
     -out /etc/apache2/ssl-server.crt
 
 COPY --from=composer /usr/bin/composer /usr/bin/composer
-
-RUN chown -R www-data:www-data /var/www
 
 WORKDIR /var/www

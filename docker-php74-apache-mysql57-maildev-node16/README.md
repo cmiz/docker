@@ -10,16 +10,13 @@
 127.0.0.1  local.test.site
 ```
 
-## Apache/PHP
-- https://local.test.site
+## コンテナ
 ```shell
 > docker-compose exec php-apache bash
 ```
 
-## Node
-```shell
-> docker-compose exec node bash
-```
+## Apache
+- https://local.test.site
 
 ## Maildev
 - http://localhost:1080

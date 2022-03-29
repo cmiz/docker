@@ -24,6 +24,4 @@ RUN openssl req -new -newkey rsa:4096 -days 365 -nodes -x509 \
 
 COPY --from=composer /usr/bin/composer /usr/bin/composer
 
-RUN chown -R www-data:www-data /var/www
-
 WORKDIR /var/www

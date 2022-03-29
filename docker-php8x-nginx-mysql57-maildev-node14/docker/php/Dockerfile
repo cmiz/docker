@@ -1,9 +1,13 @@
 FROM php:8-fpm
 
+RUN curl -sL https://deb.nodesource.com/setup_14.x | bash -
+
 RUN apt-get update && apt-get install -y \
     libzip-dev \
     libpng-dev \
-    libonig-dev
+    libonig-dev \
+    nodejs \
+    git
 
 RUN docker-php-ext-install \
     gd \
@@ -13,7 +17,5 @@ RUN docker-php-ext-install \
     opcache
 
 COPY --from=composer /usr/bin/composer /usr/bin/composer
-
-RUN chown -R www-data:www-data /var/www
 
 WORKDIR /var/www

@@ -14,16 +14,10 @@ services:
             - 80:80
             - 443:443
 
-    node:
-        build: ./node
-        volumes:
-            - ${WWW_ROOT}:/var/www
-        tty: true
-
     mysql:
         build: ./mysql
         volumes:
-            - data:/var/lib/mysql
+            - mysql:/var/lib/mysql
         environment:
             MYSQL_ROOT_PASSWORD: root
             MYSQL_DATABASE: docker
@@ -41,4 +35,4 @@ services:
             - 1080:1080
 
 volumes:
-    data:
+    mysql:
