@@ -10,11 +10,11 @@
 127.0.0.1  local.test.site
 ```
 
-## Apache/PHP
-- https://local.test.site/
+## Apache
+- https://local.test.site
 
 ## Mailhog
-- http://localhost:8025/
+- http://localhost:8025
 
 ## MySQL
 jdbc:mysql://localhost:3306/docker

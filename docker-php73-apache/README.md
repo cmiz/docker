@@ -10,8 +10,8 @@
 127.0.0.1  local.test.site
 ```
 
-## Apache/PHP
-- https://local.test.site/
+## Apache
+- https://local.test.site
 
 ## 停止
 ```

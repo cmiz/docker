@@ -10,7 +10,7 @@
 127.0.0.1  local.test.site
 ```
 
-## Nginx/PHP
+## Nginx
 - https://local.test.site
 
 ## Maildev
