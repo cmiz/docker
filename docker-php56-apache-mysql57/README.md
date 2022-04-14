@@ -19,6 +19,9 @@
 ## Apache
 - https://local.test.site
 
+## MySQL
+jdbc:mysql://localhost:3306/docker
+
 ## 停止
 ```
 > docker-compose down

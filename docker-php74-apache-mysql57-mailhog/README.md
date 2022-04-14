@@ -8,7 +8,7 @@
 
 ## コンテナログイン
 ```shell
-> docker-compose exec web bash
+> docker-compose exec php-apache bash
 ```
 
 ## hosts
