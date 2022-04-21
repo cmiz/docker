@@ -24,10 +24,8 @@ services:
 
     maildev:
         image: maildev/maildev
-        command: -w 1080 -s 1025
         ports:
-            - 1025:1025
-            - 1080:1080
+            - 8025:80
 
 volumes:
     mysql:

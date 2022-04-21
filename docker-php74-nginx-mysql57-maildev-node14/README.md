@@ -20,7 +20,7 @@
 - https://local.test.site
 
 ## Maildev
-- http://localhost:1080
+- http://localhost:8025
 
 ## MySQL
 jdbc:mysql://localhost:3306/docker
