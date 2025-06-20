@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+    php-apache:
+        build: ./php-apache
+        volumes:
+            - ${WWW_ROOT}:/var/www
+        ports:
+            - 80:80
+            - 443:443
+
